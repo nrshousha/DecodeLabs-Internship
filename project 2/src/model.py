@@ -1,8 +1,8 @@
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 def train_model(X_train, Y_train):
-    model = DecisionTreeClassifier(random_state=42)
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, Y_train)
 
     return model
